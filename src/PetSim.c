@@ -290,7 +290,7 @@ void loading_refresh() {
     doupdate();
 }
 
-void *loading_draw_pos() {
+void *loading_draw_pos(void *arg) {
     win = newwin(0, 0, 0, 0);
     p1 = newwin(5, 9, 6, (x - 46) / 2);
     p2 = newwin(4, 9, 7, (x - 26) / 2);
@@ -312,7 +312,7 @@ void *loading_draw_pos() {
     return NULL;
 }
 
-void *loading_anim() {
+void *loading_anim(void *arg) {
     int limit = 0;
     while (limit < 2) {
         delay_output(300);
