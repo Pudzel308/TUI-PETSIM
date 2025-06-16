@@ -96,7 +96,7 @@ void *loading_draw_pos(void *arg) {
 
     loading_refresh();
     while (finished == false) {
-        sleep(10000);
+        nsleep(10000);
         loading_refresh();
         getmaxyx(win, y, x);
         mvwin(p1, pp1, (x - 46) / 2);

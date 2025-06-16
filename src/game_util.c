@@ -1,5 +1,8 @@
+#define _POSIX_C_SOURCE 199309L
+
 #include <pthread.h>
 #include <ncurses.h>
+#include <time.h>
 
 #include "game_util.h"
 #include "screen.h"
@@ -9,6 +12,13 @@
 pthread_t thread1; //For rendering/drawing interfaces
 pthread_t thread2; //For logic processing
 pthread_t thread3; //Other processing
+
+void nsleep(unsigned int usec) {
+    struct timespec ts;
+    ts.tv_sec = usec / 1000000;
+    ts.tv_nsec = (usec % 1000000) * 1000;
+    nanosleep(&ts, NULL);
+}
 
 void gen_refresh() {
     refresh();

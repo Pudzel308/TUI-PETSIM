@@ -1,5 +1,4 @@
 #include <pthread.h>
-#include <unistd.h>
 
 #include "screen.h"
 #include "input.h"
@@ -33,7 +32,7 @@ void shop_scr() {
         gen_refresh();
         getmaxyx(stdscr, y, x);
         shop_scr_draw();
-        sleep(10000);
+        nsleep(10000);
         gen_refresh();
         shop_scr_key();
     }
@@ -46,7 +45,7 @@ void game_scr() {
         gen_refresh();
         getmaxyx(stdscr, y, x);
         game_scr_draw();
-        sleep(10000);
+        nsleep(10000);
         gen_refresh();
         game_scr_key();
     }
@@ -58,7 +57,7 @@ void confirmation() {
         gen_refresh();
         getmaxyx(stdscr, y, x);
         confirmation_draw();
-        sleep(10000);
+        nsleep(10000);
         gen_refresh();
         confirmation_key();
     }
@@ -70,7 +69,7 @@ void exit_prompt() {
         gen_refresh();
         getmaxyx(stdscr, y, x);
         exit_prompt_draw();
-        sleep(10000);
+        nsleep(10000);
         gen_refresh();
         exit_prompt_key();
     }
@@ -82,7 +81,7 @@ void settings() {
         gen_refresh();
         getmaxyx(stdscr, y, x);
         settings_draw();
-        sleep(10000);
+        nsleep(10000);
         gen_refresh();
     }
 }
@@ -94,7 +93,7 @@ void title_scr() {
         gen_refresh();
         getmaxyx(stdscr, y, x);
         title_scr_draw();
-        sleep(10000);
+        nsleep(10000);
         gen_refresh();
         title_scr_key();
     }
@@ -107,7 +106,7 @@ void pause_scr() {
         gen_refresh();
         getmaxyx(stdscr, y, x);
         pause_scr_draw();
-        sleep(10000);
+        nsleep(10000);
         gen_refresh();
         pause_scr_key();
     }
