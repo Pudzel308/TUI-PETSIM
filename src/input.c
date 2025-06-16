@@ -39,6 +39,21 @@ void title_scr_key() {
     keyProcessing(4, c);
 }
 
+void settings_key() {
+    c = getch();
+    switch (c) {
+        case '\x1b' : {
+            cindex = 0;
+            return_logic(code);
+        }break;
+        case 'h' : {
+            cindex = 0;
+            return_logic(code);
+        }
+    }
+    keyProcessing(4, c);
+}
+
 void pause_scr_key() {
     c = getch();
     switch (c) {

@@ -83,6 +83,7 @@ void settings() {
         settings_draw();
         nsleep(10000);
         gen_refresh();
+        settings_key();
     }
 }
 

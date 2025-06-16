@@ -47,7 +47,6 @@ void loading_refresh() {
     doupdate();
 }
 
-
 void loading_cleanup() {
     delwin(p1);
     delwin(p2);

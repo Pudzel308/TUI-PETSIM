@@ -5,6 +5,7 @@ extern int cindex;
 
 void keyProcessing(int size, char cha);
 void title_scr_key();
+void settings_key();
 void pause_scr_key();
 void game_scr_key();
 void shop_scr_key();
